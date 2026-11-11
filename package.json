@@ -1,8 +1,8 @@
 {
   "name": "codenodemap",
   "displayName": "Code Node Map",
-  "description": "Hierarchical source-code node graph viewer with Markdown nodes, explicit layout, depth-based LOD, logical-role colors, tags, and source links.",
-  "version": "0.3.51",
+  "description": "Code Node Map (codenodemap): hierarchical source-code node graph viewer with Markdown nodes, explicit layout, depth-based LOD, role colors, tags, and source links.",
+  "version": "0.3.52",
   "publisher": "wangyifu",
   "license": "MIT",
   "engines": {
@@ -56,5 +56,22 @@
   "homepage": "https://github.com/Luna1996/code-node-map#readme",
   "bugs": {
     "url": "https://github.com/Luna1996/code-node-map/issues"
-  }
+  },
+  "icon": "media/icon.png",
+  "galleryBanner": {
+    "color": "#0b0e14",
+    "theme": "dark"
+  },
+  "keywords": [
+    "codenodemap",
+    "code node map",
+    "code graph",
+    "node graph",
+    "flowchart",
+    "diagram",
+    "visualization",
+    "architecture",
+    "source code",
+    "llama.cpp"
+  ]
 }
