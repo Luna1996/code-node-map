@@ -48,5 +48,13 @@
     "README.md",
     "LICENSE"
   ],
-  "author": "wangyifu"
+  "author": "wangyifu",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Luna1996/code-node-map.git"
+  },
+  "homepage": "https://github.com/Luna1996/code-node-map#readme",
+  "bugs": {
+    "url": "https://github.com/Luna1996/code-node-map/issues"
+  }
 }
