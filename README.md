@@ -9,6 +9,28 @@
 这个扩展不依赖具体仓库。只要提供一个符合下面格式的 JSON，就可以查看任意
 代码结构图。
 
+## 界面预览
+
+**总览：阶段、容器与连线**
+
+![Code Node Map 总览](docs/screenshots/overview.png)
+
+**图片与多模态输入**
+
+![图片与多模态输入](docs/screenshots/multimodal-image.png)
+
+**网状分支：采样器可选路径**
+
+![采样分支](docs/screenshots/sampling-branches.png)
+
+**编辑模式：节点属性、标签与源码定位**
+
+![编辑模式](docs/screenshots/editing.png)
+
+**LOD 缩放：从阶段总览到模块细节**
+
+![LOD 缩放演示](docs/screenshots/demo.gif)
+
 ## 功能
 
 - 任意有向图，允许环和多条边

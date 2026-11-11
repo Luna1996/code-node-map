@@ -2,7 +2,7 @@
   "name": "codenodemap",
   "displayName": "Code Node Map",
   "description": "Code Node Map (codenodemap): hierarchical source-code node graph viewer with Markdown nodes, explicit layout, depth-based LOD, role colors, tags, and source links.",
-  "version": "0.3.52",
+  "version": "0.3.53",
   "publisher": "wangyifu",
   "license": "MIT",
   "engines": {
