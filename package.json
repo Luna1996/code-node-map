@@ -1,0 +1,52 @@
+{
+  "name": "codenodemap",
+  "displayName": "Code Node Map",
+  "description": "Hierarchical source-code node graph viewer with Markdown nodes, explicit layout, depth-based LOD, logical-role colors, tags, and source links.",
+  "version": "0.3.51",
+  "publisher": "wangyifu",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Visualization"
+  ],
+  "activationEvents": [
+    "onCommand:codenodemap.open"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codenodemap.open",
+        "title": "Code Node Map: Open"
+      }
+    ],
+    "configuration": {
+      "title": "Code Node Map",
+      "properties": {
+        "codenodemap.file": {
+          "type": "string",
+          "default": "",
+          "description": "工作区内的 codemap JSON 路径。留空则自动搜索或选择文件。"
+        }
+      }
+    },
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "codenodemap.open",
+          "when": "resourceExtname == .json",
+          "group": "navigation@99"
+        }
+      ]
+    }
+  },
+  "files": [
+    "extension.js",
+    "media/**",
+    "README.md",
+    "LICENSE"
+  ],
+  "author": "wangyifu"
+}

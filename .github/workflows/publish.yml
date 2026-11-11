@@ -1,0 +1,42 @@
+name: Publish VS Code Extension
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Optional version bump: patch, minor, major, or x.y.z. Leave empty to publish current version.'
+        required: false
+        default: ''
+        type: string
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: marketplace-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Publish with Trusted Publishing
+        shell: bash
+        run: |
+          VERSION="${{ github.event.inputs.version }}"
+          BASE_ARGS="--oidc --no-dependencies --allow-missing-repository"
+          if [ -n "$VERSION" ]; then
+            npx --yes @vscode/vsce@4.1.0 publish $BASE_ARGS "$VERSION"
+          else
+            npx --yes @vscode/vsce@4.1.0 publish $BASE_ARGS
+          fi
